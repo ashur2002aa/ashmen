@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drinks</title>
+    <style>
+        /* Base styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, #6a11cb, #2575fc); /* Purple gradient */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Background moving icons */
+        .icon {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: move 10s infinite linear;
+            opacity: 0.5;
+        }
+
+        .icon:nth-child(1) { top: 10%; left: 15%; animation-duration: 15s; }
+        .icon:nth-child(2) { top: 30%; left: 70%; animation-duration: 18s; }
+        .icon:nth-child(3) { top: 60%; left: 20%; animation-duration: 12s; }
+        .icon:nth-child(4) { top: 80%; left: 80%; animation-duration: 16s; }
+        .icon:nth-child(5) { top: 40%; left: 50%; animation-duration: 14s; }
+
+        @keyframes move {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(50px) rotate(180deg); }
+            100% { transform: translateY(0px) rotate(360deg); }
+        }
+
+        /* Menu container */
+        .menu-container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #6a11cb; /* Purple text color */
+            margin-bottom: 30px;
+        }
+
+        .drink-button {
+            display: block;
+            width: 200px; /* Fixed width */
+            height: 60px; /* Fixed height */
+            margin: 10px auto; /* Center the button */
+            background: #6a11cb; /* Button color */
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.5em;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            line-height: 60px; /* Center text vertically */
+        }
+
+        .drink-button:hover {
+            transform: translateY(-3px);
+            background: #2575fc; /* Button hover color */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .back-button {
+            display: inline-block;
+            width: 200px; /* Fixed width */
+            height: 60px; /* Fixed height */
+            margin: 20px auto; /* Center the button */
+            background: #6a11cb; /* Button color */
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.5em;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            line-height: 60px; /* Center text vertically */
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+            background: #2575fc; /* Button hover color */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .drink-button, .back-button {
+                width: 150px; /* Smaller width on medium screens */
+                height: 50px; /* Adjusted height */
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .drink-button, .back-button {
+                width: 120px; /* Smaller width on small screens */
+                height: 40px; /* Adjusted height */
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Moving Icons -->
+    <div class="icon"></div>
+    <div class="icon"></div>
+    <div class="icon"></div>
+    <div class="icon"></div>
+    <div class="icon"></div>
+
+    <!-- Drinks Menu Container -->
+    <div class="menu-container">
+        <h1>Drinks Menu</h1>
+        <button class="drink-button">Coke</button>
+        <button class="drink-button">Sprite</button>
+        <button class="drink-button">Fanta</button>
+        <button class="drink-button">Water</button>
+        <button class="drink-button">Lemonade</button>
+        <button class="back-button" onclick="location.href='index.html'">Back to Menu</button>
+    </div>
+
+</body>
+</html>
+
